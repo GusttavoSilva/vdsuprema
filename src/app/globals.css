@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #171717;
+  --font-geist-sans: "Geist", Arial, Helvetica, sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.font-sans {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-mono {
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.hero-background {
+  background-image: url("/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Animações */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
