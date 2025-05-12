@@ -1,19 +1,34 @@
+import Image from "next/image";
+
 interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
+  image?: string; // URL da imagem (opcional)
 }
 
 export default function ServiceCard({
   title,
   description,
   icon,
+  image,
 }: ServiceCardProps) {
   return (
     <div className="group p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer flex flex-col items-center">
-      <div className="w-16 h-16 flex items-center justify-center mb-4 text-blue-600 text-4xl group-hover:scale-110 transition-transform duration-300">
-        {icon}
-      </div>
+      {image ? (
+        <div className="w-full h-48 relative mb-4 rounded-lg overflow-hidden">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+      ) : (
+        <div className="w-16 h-16 flex items-center justify-center mb-4 text-blue-600 text-4xl group-hover:scale-110 transition-transform duration-300">
+          {icon}
+        </div>
+      )}
       <h3 className="text-xl font-semibold text-center mb-2 text-gray-900 dark:text-white font-sans">
         {title}
       </h3>

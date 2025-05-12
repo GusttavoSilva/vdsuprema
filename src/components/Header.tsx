@@ -54,7 +54,7 @@ export default function Header() {
           </ul>
           {/* Botão Menu Mobile */}
           <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button
               onClick={toggleMenu}
               className="text-black dark:text-white text-2xl"
