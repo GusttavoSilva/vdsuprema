@@ -4,7 +4,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
-  image?: string; // URL da imagem (opcional)
+  image?: string;
 }
 
 export default function ServiceCard({
@@ -16,12 +16,14 @@ export default function ServiceCard({
   return (
     <div className="group p-6 bg-white dark:bg-gray-900 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer flex flex-col items-center">
       {image ? (
-        <div className="w-full h-48 relative mb-4 rounded-lg overflow-hidden">
+        <div className="w-full aspect-[4/3] relative mb-4 rounded-lg overflow-hidden">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-contain group-hover:scale-105 transition-transform duration-300"
+            priority
           />
         </div>
       ) : (
