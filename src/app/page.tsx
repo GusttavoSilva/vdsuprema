@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import FeedbackCarousel from "@/components/FeedbackCarousel";
-import { image } from "framer-motion/client";
 
 export const metadata = {
   title: "VD Suprema - Vidraçaria",
@@ -195,11 +194,25 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-4 dark:text-white">
                     Telefone e Email
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    Telefone: (62) 9.8143-0276
+                  <p className="text-gray-700 dark:text-gray-300 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md mb-3 hover:shadow-lg transition-shadow">
+                    Telefone:{" "}
+                    <a
+                      href="https://wa.me/5562981430276"
+                      className="font-semibold text-white hover:text-blue-500 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      (62) 9.8143-0276
+                    </a>
                   </p>
-                  <p className="text-gray-700 dark:text-gray-300">
-                    Email: vdsuprema2015@gmail.com
+                  <p className="text-gray-700 dark:text-gray-300 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    Email:{" "}
+                    <a
+                      href="mailto:vdsuprema2015@gmail.com"
+                      className="font-semibold text-white hover:text-blue-500 transition-colors"
+                    >
+                      vdsuprema2015@gmail.com
+                    </a>
                   </p>
                 </div>
 
@@ -207,7 +220,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-4 dark:text-white">
                     Horário de Funcionamento
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-700 dark:text-gray-300 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                     Segunda a Sábado: 8h às 18h
                   </p>
                 </div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface FeedbackCardProps {
   name: string;
   text: string;
@@ -16,9 +18,11 @@ export default function FeedbackCard({
       <div className="flex items-center mb-3 md:mb-4">
         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-200 overflow-hidden mr-3 md:mr-4 flex-shrink-0">
           {image ? (
-            <img
+            <Image
               src={image}
               alt={name}
+              width={48}
+              height={48}
               className="w-full h-full object-cover"
             />
           ) : (

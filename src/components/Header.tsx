@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,11 +8,18 @@ export default function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md z-50 font-sans">
+    <header className="fixed w-full bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm shadow-md z-50 font-sans">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="font-extrabold text-2xl text-blue-600 tracking-tight">
-            VD Suprema
+          <div className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Logo Vidraçaria Suprema"
+              width={120}
+              height={68}
+              className="h-14 w-auto"
+              priority
+            />
           </div>
           {/* Menu Desktop */}
           <ul className="hidden md:flex gap-6 items-center">

@@ -13,12 +13,13 @@ interface FeedbackCarouselProps {
 }
 
 export default function FeedbackCarousel({ feedbacks }: FeedbackCarouselProps) {
-  const duplicatedFeedbacks = [...feedbacks, ...feedbacks, ...feedbacks];
+  // Reduzindo para apenas uma duplicação para melhor performance
+  const duplicatedFeedbacks = [...feedbacks, ...feedbacks];
 
   return (
     <div className="overflow-hidden">
       <motion.div
-        className="flex gap-4 md:gap-8"
+        className="flex gap-3 md:gap-6"
         animate={{
           x: ["0%", "-50%"],
         }}
@@ -26,10 +27,20 @@ export default function FeedbackCarousel({ feedbacks }: FeedbackCarouselProps) {
           duration: 20,
           ease: "linear",
           repeat: Infinity,
+          repeatType: "loop",
+        }}
+        style={{
+          willChange: "transform", // otimização de performance
         }}
       >
         {duplicatedFeedbacks.map((feedback, index) => (
-          <div key={index} className="flex-shrink-0 w-[280px] md:w-[350px]">
+          <div
+            key={index}
+            className="flex-shrink-0 w-[250px] md:w-[300px]"
+            style={{
+              contain: "paint layout", // otimização de performance
+            }}
+          >
             <FeedbackCard {...feedback} />
           </div>
         ))}
