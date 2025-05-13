@@ -153,7 +153,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Seção de Depoimentos Modificada */}
         <section className="py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
@@ -219,6 +218,14 @@ export default function Home() {
                     Segunda a Sábado: 8h às 18h
                   </p>
                 </div>
+                <a
+                  href="https://www.instagram.com/vidracariasuprema2023" // Substitua pelo seu link do Instagram
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-8 inline-block text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 shadow-md hover:shadow-lg transform hover:scale-105"
+                >
+                  Siga-nos no Instagram
+                </a>
               </div>
             </div>
           </div>
