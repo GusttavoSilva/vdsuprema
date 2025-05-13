@@ -3,11 +3,6 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import FeedbackCarousel from "@/components/FeedbackCarousel";
 
-export const metadata = {
-  title: "VD Suprema - Vidraçaria",
-  description: "Soluções em vidros e espelhos com qualidade e excelência",
-};
-
 export default function Home() {
   const services = [
     {
