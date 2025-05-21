@@ -162,6 +162,39 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Seção de Galeria */}
+        <section className="py-20 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
+              Galeria
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {[...Array(10)].map((_, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square overflow-hidden rounded-lg"
+                >
+                  <img
+                    src={`/gallery/trabalho${index + 1}.jpg`}
+                    alt={`Trabalho ${index + 1}`}
+                    className="object-cover w-full h-full hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="text-center">
+              <a
+                href="https://www.instagram.com/vidracariasuprema2023"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+              >
+                Veja mais no Instagram
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Seção de Contato */}
         <section id="contato" className="py-20 bg-gray-100 dark:bg-gray-800">
           <div className="container mx-auto px-4">
@@ -219,12 +252,12 @@ export default function Home() {
                   </p>
                 </div>
                 <a
-                  href="https://www.instagram.com/vidracariasuprema2023" // Substitua pelo seu link do Instagram
+                  href="https://wa.me/5562981430276?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-block text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 shadow-md hover:shadow-lg transform hover:scale-105"
+                  className="mt-8 inline-block text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 ease-in-out bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transform hover:scale-105"
                 >
-                  Siga-nos no Instagram
+                  Chame-nos no WhatsApp
                 </a>
               </div>
             </div>
